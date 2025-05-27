@@ -1,4 +1,4 @@
-# Exp.No:35  
+# Exp.No:13 E 
 ## TOWER OF HANOI
 
 ---
@@ -32,13 +32,27 @@ Consider the names of the tower pegs as A, B, C. Get the number of disks value f
 ### PROGRAM  
 
 ```
+def TowerOfHanoi(n , source, destination, auxiliary):
+if(n>0):
+TowerOfHanoi(n-1,source,auxiliary,destination)
+print(f"Move disk from {source} to {destination}")
 
+n=int(input())
+print("No. of disks =",n)def TowerOfHanoi(n , source, destination, auxiliary):
+if(n>0):
+TowerOfHanoi(n-1,source,auxiliary,destination)
+print(f"Move disk from {source} to {destination}")
+
+n=int(input())
+print("No. of disks =",n)
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/a00fb962-b6b8-4119-8efc-d4b2531c480b)
 
 
 
 ### RESULT
+Thus, the given python program is implemented and executed sucessfully.
 
