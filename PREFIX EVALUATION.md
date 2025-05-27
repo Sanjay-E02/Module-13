@@ -1,4 +1,4 @@
-# Exp.No:34  
+# Exp.No:13 D  
 ## PREFIX EVALUATION
 
 ---
@@ -29,11 +29,38 @@ To write a Python program to evaluate a user-given Prefix expression using a sta
 
 ```
 
+OPERATORS=set(['*','-','+','/'])
 
+def evaluate(expression):
+
+stack = []
+for c in expression[::-1]:
+if c not in OPERATORS:
+stack.append(int(c))
+else:
+o1=stack.pop()
+o2=stack.pop()
+if c=='+':
+stack.append(o1+o2)
+elif c=='-':
+stack.append(o1-o2)
+elif c=='':
+stack.append(o1o2)
+elif c=='/':
+stack.append(o1/o2)
+return stack.pop()
+test_expression=input()
+print("Prefix Expression :",test_expression)
+print("Evaluation result :",evaluate(test_expression))
 ```
 
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/dfa45e3c-faf0-432b-a36a-b86242e0ecaa)
+
+## Result:
+Thus, the given python program is implemented and executed sucessfully.
+
 
 
 
