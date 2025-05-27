@@ -1,4 +1,4 @@
-# Exp.No:33  
+# Exp.No:13 C  
 ## POSTFIX EVALUATION
 
 ---
@@ -32,12 +32,41 @@ To write a Python program to evaluate a user-given Postfix expression that conta
 ### PROGRAM
 
 ```
+OPERATORS=set(['*','-','+','%','/','**'])
 
+def evaluate_postfix(expression):
+stack=[]
+for C in expression:
+if C not in OPERATORS:
+stack.append(int(C))
+stack.append(int(C))
+else:
+second = stack.pop()
+first = stack.pop()
+if C == '+':
+res = int(first)+int(second)
+elif C == '-':
+res = int(first)-int(second)
+elif C == '*':
+res = int(first)*int(second)
+elif C == '%':
+res = int(first)%int(second)
+elif C == '/':
+res = int(first)/int(second)
+elif C == '**':
+res = int(first)**int(second)
+stack.append(res)
+return stack[0]
+
+expression = input()
+print("postfix expression: ",expression)
+print("Evaluation result: ",evaluate_postfix(expression))
 
 ```
 
 ### OUTPUT
+![image](https://github.com/user-attachments/assets/638e015c-bf15-4c34-a884-89bbd20f17e6)
 
 
 ### RESULT
-
+Thus, the given python program is implemented and executed sucessfully.
